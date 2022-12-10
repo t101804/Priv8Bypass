@@ -65,7 +65,7 @@ func (rt RoundTripper) RoundTrip(r *http.Request) (*http.Response, error) {
 		return nil, err
 	}
 	// Check if the Cloudflare anti-bot has prevented the request
-	if resp.StatusCode == 503 && strings.HasPrefix(resp.Header.Get("Server"), "cloudflare") {
+	if resp.StatusCode == 403 && strings.HasPrefix(resp.Header.Get("Server"), "cloudflare") {
 		req, err := buildAnswerRequest(resp)
 		if err != nil {
 			return nil, err
