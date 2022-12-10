@@ -90,7 +90,7 @@ func buildAnswerRequest(resp *http.Response) (*http.Request, error) {
 	if err != nil {
 		return nil, err
 	}
-
+	fmt.Print(string(b))
 	js, err := extractJS(string(b), resp.Request.URL.Host)
 	if err != nil {
 		return nil, err
