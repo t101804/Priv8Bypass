@@ -11,7 +11,7 @@ import(
     "net"
     "net/http"
 
-    "github.com/caffix/cloudflare-roundtripper/cfrt"
+    "github.com/t101804/Priv8Bypass/cfrt"
 )
 
 func main() {
